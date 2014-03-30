@@ -1,0 +1,16 @@
+<h3>Holiday Reminder</h3>
+
+<p>Hi! This is just a friendly reminder that a holiday is upcoming. Here are some suggestions of gifts you can buy.</p>
+
+<ol>
+	{% for suggestion in suggestions %}
+		<li>
+			<h3> {{ suggestion.title }} </h3>
+			<img src="{{ suggestion.image }}">
+			<p> {{ suggestion.description}} </p>
+			<a href="{{ suggestion.url }}">See it in Etsy!</a>
+		</li>
+	{% endfor %}
+</ol>
+
+<h3>Hope you take these into consideration</h3>
